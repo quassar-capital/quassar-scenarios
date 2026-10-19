@@ -88,17 +88,11 @@ def gaussian_factor_scenarios(
         or n_scenarios < 1
     ):
         raise ValueError("n_scenarios must be a positive integer")
-    if (
-        isinstance(seed, (bool, np.bool_))
-        or not isinstance(seed, (int, np.integer))
-        or seed < 0
-    ):
+    if isinstance(seed, (bool, np.bool_)) or not isinstance(seed, (int, np.integer)) or seed < 0:
         raise ValueError("seed must be a nonnegative integer")
     eigenvalues, eigenvectors = np.linalg.eigh((cov + cov.T) / 2)
     root = eigenvectors @ np.diag(np.sqrt(np.maximum(eigenvalues, 0.0)))
-    return (
-        np.random.default_rng(seed).standard_normal((n_scenarios, mu.size)) @ root.T + mu
-    )
+    return np.random.default_rng(seed).standard_normal((n_scenarios, mu.size)) @ root.T + mu
 
 
 def stress_loss(

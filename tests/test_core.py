@@ -48,9 +48,7 @@ def test_sensitivity_finite_difference(exposures):
 
 
 def test_stress_loss_sign_and_notional(exposures):
-    assert stress_loss(
-        [0.6, 0.4], exposures, [0.1, -0.02], notional=1_000_000
-    ) == pytest.approx(-30_000)
+    assert stress_loss([0.6, 0.4], exposures, [0.1, -0.02], notional=1_000_000) == pytest.approx(-30_000)
 
 
 def test_gaussian_seed_reproducibility():
