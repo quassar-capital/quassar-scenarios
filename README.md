@@ -10,6 +10,40 @@ Its research scope encompasses economic scenario construction, financial sensiti
 
 The methodological framework emphasizes economic coherence, statistical rigor, numerical reliability, transparent assumptions, and reproducibility.
 
+<!-- RESEARCH_INDEX_START -->
+## Research Programs & Scientific Implementations
+
+The following research programs have corresponding scientific implementations in this repository.
+
+### Research 01 — Cross-Asset Scenario Modeling
+
+Factor-based scenario generation, cross-asset stress analysis, and quantitative simulation.
+
+**Scientific implementation**
+
+- [`core.py`](src/quassar_scenarios/core.py)
+
+**Automated validation**
+
+- [`test_core.py`](tests/test_core.py)
+
+### Research 02 — Markov Regime-Switching Research
+
+Finite-state Markov processes, transition dynamics, probability evolution, and Monte Carlo convergence validation.
+
+**Scientific implementation**
+
+- [`regime_switching.py`](src/quassar_scenarios/regime_switching.py)
+
+**Automated validation**
+
+- [`test_regime_switching.py`](tests/test_regime_switching.py)
+
+**Research experiments**
+
+- [`regime_monte_carlo.py`](research/regime_monte_carlo.py)
+<!-- RESEARCH_INDEX_END -->
+
 ## Research Domains
 
 ### Macroeconomic Scenario Analysis
