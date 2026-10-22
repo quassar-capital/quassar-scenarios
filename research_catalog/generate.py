@@ -26,8 +26,7 @@ def main():
     lines = [
         "## Research Programs & Scientific Implementations",
         "",
-        "The following research programs have corresponding scientific "
-        "implementations in this repository.",
+        "The following research programs have corresponding scientific implementations in this repository.",
         "",
     ]
 
@@ -39,12 +38,14 @@ def main():
             raise ValueError(f"Duplicate research identifier: {identifier}")
         identifiers.add(identifier)
 
-        lines.extend([
-            f"### Research {identifier} — {title}",
-            "",
-            entry["description"],
-            "",
-        ])
+        lines.extend(
+            [
+                f"### Research {identifier} — {title}",
+                "",
+                entry["description"],
+                "",
+            ]
+        )
 
         for field, heading in (
             ("implementation", "Scientific implementation"),
