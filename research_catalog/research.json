@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "repository": "quassar-scenarios",
+  "research": [
+    {
+      "id": "01",
+      "title": "Cross-Asset Scenario Modeling",
+      "description": "Factor-based scenario generation, cross-asset stress analysis, and quantitative simulation.",
+      "implementation": [
+        "src/quassar_scenarios/core.py"
+      ],
+      "tests": [
+        "tests/test_core.py"
+      ],
+      "experiments": []
+    },
+    {
+      "id": "02",
+      "title": "Markov Regime-Switching Research",
+      "description": "Finite-state Markov processes, transition dynamics, probability evolution, and Monte Carlo convergence validation.",
+      "implementation": [
+        "src/quassar_scenarios/regime_switching.py"
+      ],
+      "tests": [
+        "tests/test_regime_switching.py"
+      ],
+      "experiments": [
+        "research/regime_monte_carlo.py"
+      ]
+    }
+  ]
+}
